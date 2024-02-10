@@ -3,3 +3,4 @@ public class Algoritmy {
         System.out.println("Ahoj světe!");
     }
 }
+// ahoj

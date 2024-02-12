@@ -4,7 +4,8 @@ import java.util.Random;
 /**
  * Třída reprezentuje hrací kostku
  */
-public class Kostka {
+public class Kostka
+{
     /**
      * Generátor náhodných čísel
      */
@@ -14,20 +15,50 @@ public class Kostka {
      */
     private int pocetSten;
 
-    public Kostka(int aPocetSten)
+    /**
+     * Vytvoří novou instanci hrací kostky
+     */
+    public Kostka()
     {
-        pocetSten = aPocetSten;
+        this.pocetSten = 6;
         random = new Random();
     }
 
-    public Kostka() {
-        pocetSten = 6;
+    /**
+     * Vytvoří novou instanci hrací kostky
+     * @param pocetSten Počet stěn hrací kostky
+     */
+    public Kostka(int pocetSten)
+    {
+        this.pocetSten = pocetSten;
         random = new Random();
     }
 
+    /**
+     * Vrátí počet stěn hrací kostky
+     * @return Počet stěn hrací kostky
+     */
     public int vratPocetSten()
     {
         return pocetSten;
     }
 
+    /**
+     * Vykoná hod kostkou
+     * @return Číslo od 1 do počtu stěn
+     */
+    public int hod()
+    {
+        return random.nextInt(pocetSten) + 1;
+    }
+
+    /**
+     * Vrací textovou reprezentaci kostky
+     * @return Textová reprezentace kostky
+     */
+    @Override
+    public String toString()
+    {
+        return String.format("Kostka s %s stěnami", pocetSten);
+    }
 }

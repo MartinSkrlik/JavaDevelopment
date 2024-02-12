@@ -57,7 +57,7 @@ public class Kostka
      * @return Textová reprezentace kostky
      */
     @Override
-    public String toString()
+    public String toString ()
     {
         return String.format("Kostka s %s stěnami", pocetSten);
     }

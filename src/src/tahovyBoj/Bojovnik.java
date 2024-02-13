@@ -58,15 +58,29 @@ public class Bojovnik {
         int zraneni = uder - (obrana + kostka.hod());
         if (zraneni > 0) {
             zivot -= zraneni;
+            zprava = String.format("%s utrpěl poškození %s hp", jmeno, zraneni);
             if (zivot <= 0) {
                 zivot = 0;
+                zprava += " a zemřel";
+            } else {
+                zprava = String.format("%s odrazil útok", jmeno);
             }
+            nastavZpravu(zprava);
         }
     }
 
     public void utoc (Bojovnik souper) {
         int uder = utok + kostka.hod();
+        nastavZpravu(String.format("%s útočí s úderem za %s hp", jmeno, uder));
         souper.branSe(uder);
+    }
+
+    private void nastavZpravu (String zprava) {
+        this.zprava = zprava;
+    }
+
+    public String vratPoslednyZpravu () {
+        return zprava;
     }
 
 }

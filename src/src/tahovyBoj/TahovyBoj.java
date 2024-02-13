@@ -19,12 +19,19 @@ public class TahovyBoj {
 
         Kostka kostka = new Kostka(10);
         Bojovnik bojovnik = new Bojovnik("Zalgoren", 100, 20, 10, kostka);
-        System.out.printf(" %n%nBojovnik: %s%n", bojovnik);
-        System.out.printf("Nazive: %s%n", bojovnik.jeZivy());
-        System.out.printf("GrafickyZivot: %s%n", bojovnik.grafickyZivot());
+//        System.out.printf(" %n%nBojovnik: %s%n", bojovnik);
+//        System.out.printf("Nazive: %s%n", bojovnik.jeZivy());
+        System.out.printf(" %n%nGrafickyZivot: %s%n", bojovnik.grafickyZivot());
 
-        bojovnik.utoc(bojovnik);
-        System.out.printf("Zivot po utoku: %s%n ", bojovnik.grafickyZivot());
+//        bojovnik.utoc(bojovnik);
+//        System.out.printf("Zivot po utoku: %s%n ", bojovnik.grafickyZivot());
+
+        Bojovnik souper = new Bojovnik("IvanGadzo",60, 18,15, kostka);
+        souper.utoc(bojovnik);
+        System.out.println(souper.vratPoslednyZpravu());
+        System.out.println(bojovnik.vratPoslednyZpravu());
+
+        System.out.printf("Život: %s%n", bojovnik.grafickyZivot());
 
     }
 }

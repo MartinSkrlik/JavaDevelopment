@@ -2,13 +2,13 @@ package tahovyBoj;
 
 public class Bojovnik {
 
-    private String jmeno;
-    private int zivot;
-    private int maximalniZivot;
-    private int utok;
-    private int obrana;
+    protected String jmeno;
+    protected int zivot;
+    protected int maximalniZivot;
+    protected int utok;
+    protected int obrana;
     private String zprava;
-    private Kostka kostka;
+    protected Kostka kostka;
 
     public Bojovnik (String jmeno, int zivot, int utok, int obrana, Kostka kostka) {
         this.jmeno = jmeno;

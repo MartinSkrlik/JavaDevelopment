@@ -36,7 +36,7 @@ public class TahovyBoj {
 
         // Nastavit instancie objektu
         Bojovnik ivanKandrac = new Bojovnik("IvanKandrac", 100, 20, 10, kostka);
-        Bojovnik gandalf = new Mag("KennyNight", 60, 18, 15, kostka, 30, 45);
+        Bojovnik gandalf = new Mag("Gandalf", 60, 18, 15, kostka, 30, 45);
         Arena arena = new Arena(ivanKandrac, gandalf, kostka);
         // Samotny zapas
         arena.zapas();

@@ -37,7 +37,7 @@ public class Bojovnik {
         return (zivot > 1);
     }
 
-    public String grafickyZivot () {
+    protected String grafickyUkazatel (int aktualni, int maximalni) {
         String grafickyZivot = "[";
         int celkom = 20;
         double pocetDilku = Math.round(((double) zivot / maximalniZivot) * celkom);
@@ -52,6 +52,10 @@ public class Bojovnik {
         }
         grafickyZivot += "]";
         return grafickyZivot;
+    }
+
+    protected String grafickyZivot () {
+        return grafickyUkazatel(zivot, maximalniZivot);
     }
 
     public void branSe (int uder) {
@@ -75,7 +79,7 @@ public class Bojovnik {
         souper.branSe(uder);
     }
 
-    private void nastavZpravu (String zprava) {
+    protected void nastavZpravu (String zprava) {
         this.zprava = zprava;
     }
 

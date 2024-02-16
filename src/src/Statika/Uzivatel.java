@@ -6,7 +6,7 @@ public class Uzivatel {
     private String heslo;
     private boolean prihlaseny;
     private int id;
-    public static int maximalniDelkaHesla = 6;
+    public static int minimalniDelkaHesla = 6;
     private static int dalsiId = 1;
 
     public Uzivatel(String jmeno, String heslo) {
@@ -25,11 +25,17 @@ public class Uzivatel {
         return false;   // hesla nesuhlasia
     }
 
-//    public static boolean zvalidujHeslo(String heslo) {
-
+    public static boolean zvalidujHeslo(String heslo) {
+        return heslo.length() >= minimalniDelkaHesla;
     }
 
+    public static int vratMinimalniDelkuHesla() {
+        return minimalniDelkaHesla;
+    }
 
+    public int vratID() {
+        return id;
+    }
 
 
 }

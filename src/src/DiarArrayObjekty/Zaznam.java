@@ -30,7 +30,7 @@ public class Zaznam {
 
     @Override
     public String toString() {
-        return datumCas + " " + text;
+        return Diar.FORMAT_DATA.format(datumCas) + " " + text;
     }
 
 

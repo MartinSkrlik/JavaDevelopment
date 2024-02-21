@@ -2,6 +2,7 @@ package DiarArrayObjekty;
 
 import java.util.ArrayList;
 import java.time.LocalDateTime;
+import java.time.LocalDate;
 
 public class Databaza {
 
@@ -11,7 +12,7 @@ public class Databaza {
         zaznamy = new ArrayList<>();
     }
 
-    public void pridani(LocalDateTime datumCas, String text) {
+    public void pridajZaznam(LocalDateTime datumCas, String text) {
         zaznamy.add(new Zaznam(datumCas, text));
     }
 
